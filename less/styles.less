@@ -1,0 +1,250 @@
+// Core variables and mixins
+@import "bootstrap-3.2.0/variables.less";
+@import "bootstrap-3.2.0/mixins.less";
+
+// Reset and dependencies
+@import "bootstrap-3.2.0/normalize.less";
+@import "bootstrap-3.2.0/print.less";
+@import "bootstrap-3.2.0/glyphicons.less";
+
+// Core CSS
+@import "bootstrap-3.2.0/scaffolding.less";
+@import "bootstrap-3.2.0/type.less";
+@import "bootstrap-3.2.0/code.less";
+@import "bootstrap-3.2.0/grid.less";
+@import "bootstrap-3.2.0/tables.less";
+@import "bootstrap-3.2.0/forms.less";
+@import "bootstrap-3.2.0/buttons.less";
+
+// Components
+@import "bootstrap-3.2.0/component-animations.less";
+@import "bootstrap-3.2.0/dropdowns.less";
+@import "bootstrap-3.2.0/button-groups.less";
+@import "bootstrap-3.2.0/input-groups.less";
+@import "bootstrap-3.2.0/navs.less";
+@import "bootstrap-3.2.0/navbar.less";
+@import "bootstrap-3.2.0/breadcrumbs.less";
+@import "bootstrap-3.2.0/pagination.less";
+@import "bootstrap-3.2.0/pager.less";
+@import "bootstrap-3.2.0/labels.less";
+@import "bootstrap-3.2.0/badges.less";
+@import "bootstrap-3.2.0/jumbotron.less";
+@import "bootstrap-3.2.0/thumbnails.less";
+@import "bootstrap-3.2.0/alerts.less";
+@import "bootstrap-3.2.0/progress-bars.less";
+@import "bootstrap-3.2.0/media.less";
+@import "bootstrap-3.2.0/list-group.less";
+@import "bootstrap-3.2.0/panels.less";
+@import "bootstrap-3.2.0/responsive-embed.less";
+@import "bootstrap-3.2.0/wells.less";
+@import "bootstrap-3.2.0/close.less";
+
+// Components w/ JavaScript
+@import "bootstrap-3.2.0/modals.less";
+@import "bootstrap-3.2.0/tooltip.less";
+@import "bootstrap-3.2.0/popovers.less";
+@import "bootstrap-3.2.0/carousel.less";
+
+// Utility classes
+@import "bootstrap-3.2.0/utilities.less";
+@import "bootstrap-3.2.0/responsive-utilities.less";
+
+@import "font-awesome-4.1.0/variables.less";
+@import "font-awesome-4.1.0/mixins.less";
+@import "font-awesome-4.1.0/path.less";
+@import "font-awesome-4.1.0/core.less";
+@import "font-awesome-4.1.0/larger.less";
+@import "font-awesome-4.1.0/fixed-width.less";
+@import "font-awesome-4.1.0/list.less";
+@import "font-awesome-4.1.0/bordered-pulled.less";
+@import "font-awesome-4.1.0/spinning.less";
+@import "font-awesome-4.1.0/rotated-flipped.less";
+@import "font-awesome-4.1.0/stacked.less";
+@import "font-awesome-4.1.0/icons.less";
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Inconsolata);
+
+.fixed-width {
+  font-family: 'Inconsolata';
+}
+
+/*
+ * Base structure
+ */
+body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  margin-top: 50px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.active a {
+  color: #ffffff;
+}
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.monospace-field {
+  background: #EBF0F2;
+  font-family: Consolas, monospace;
+  border: none;
+  border-radius: 0px;
+  font-size: 1.5em;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    border-color: none;
+outline: 0;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+
+.jumbotron {
+  padding: 30px;
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+.main-content {
+  background-color: #fff;
+}
+
+.footer {
+  margin-bottom: 1em;
+}
+
+.toolbar {
+  padding-top: 20px;
+
+  .nav {
+    float: right;
+  }
+}
+
+.panel {
+  margin-top: 20px;
+}
+
+.full-screen-form {
+
+  .form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .form-signin .form-signin-heading,
+  .form-signin .checkbox {
+    margin-bottom: 10px;
+  }
+  .form-signin .checkbox {
+    font-weight: normal;
+  }
+  .form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
