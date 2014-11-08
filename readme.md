@@ -5,9 +5,32 @@ Built in two weeks to grab and store a wordpress RSS feed and allow users to pos
 ![screenshot of team publisher](https://raw.github.com/jamesduffy/publishing-dashboard/master/screenshot.png)
 
 
+### Requirements
+
+* PHP
+* PHP Composer
+* MySQL
+
+
 ### Setup Instructions
 
 1. Clone or download the master repository
+   ```
+   git clone https://github.com/jamesduffy/publishing-dashboard.git && cd publisher-dashboard
+   ```
+2. Run `composer update`
+3. Update MySQL connection variables in `/app/config/database.php`
+4. Update Twitter variables in `/app/config/packages/thujohn/twitter/config.php`
+  1. With your app's CONSUMER_KEY and CONSUMER_SECRET
+  2. With your official twitter account's ACCESS_TOKEN and ACCESS_TOKEN_SECRET
+5. Run `php artisan migrate`
+6. Add two tasks to your server to run in the background using `crontab -e`
+```
+0 * * * *	php /path/to/project/artisan stats:twitter
+0 0 * * *	php /path/to/project/artisan stats:twittercount
+*/5 * * * *	php /path/to/project/artisan articles:get
+* * * * *	php /path/to/project/artisan campaigns:publish
+```
 
 
 ### Contributing
