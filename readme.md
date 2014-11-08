@@ -1,8 +1,8 @@
-# Team Publisher
+# Publishing Dashboard
 
 Built in two weeks to grab and store a wordpress RSS feed and allow users to post to the official twitter account with editorial control.
 
-![screenshot of team publisher](https://raw.github.com/jamesduffy/publishing-dashboard/master/screenshot.png)
+![screenshot of publishing dashboard](https://raw.github.com/jamesduffy/publishing-dashboard/master/screenshot.png)
 
 
 ### Requirements
@@ -40,7 +40,7 @@ All issues and pull requests should be filed to the project's [GitHub Repository
 
 ### Credits
 
-Team Publisher is built with these awesome open-sourced software:
+Publishing Dashboard is built with these awesome open-sourced software:
 
 * [Laravel 4](http://laravel.com/)
 * [SimplePie](http://simplepie.org/)
@@ -53,4 +53,4 @@ Team Publisher is built with these awesome open-sourced software:
 
 ### License
 
-Team Publisher is open-sourced software licensed under GPLv3 included in license.txt.
+Publishing Dashboard is open-sourced software licensed under GPLv3 included in license.txt.
